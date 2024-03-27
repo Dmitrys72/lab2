@@ -12,15 +12,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity implements CallbackListener {
 
-    private TextView textView;
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        textView = findViewById(R.id.textView);
 
         Fragment_1 inputFragment = new Fragment_1();
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerView, inputFragment).commit();
